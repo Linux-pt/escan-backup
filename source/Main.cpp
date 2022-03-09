@@ -209,6 +209,7 @@ int main(int argc,char *argv[])
 					struct stat sb;	
 					if (lstat(argv[i], &sb) == -1) {
 						WriteLogForlibmwshare(1,"lstat error" );
+						//continue;
 						perror("lstat");
 						exit(EXIT_FAILURE);
 					}

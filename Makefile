@@ -9,8 +9,10 @@ LIBS=/opt/MicroWorld/lib/libmwshare.so.1.0.0 /opt/MicroWorld/lib/libmwact.so.1.0
 
 final:
 	g++ -DZIP_STD  ${source} ${header} -Wl,-rpath=/opt/Microworld/lib/ ${LIBS} -o escan-backup -lpthread -lsqlite3 #-lzip 
-
+	@echo DONE!
+	@echo escan-backup READY!
 
 
 clean :
-	rm  escan-backup
+	rm  -f escan-backup
+	@echo CLEANED!
