@@ -1,0 +1,4 @@
+#ifndef __ListFileRecursively_For_FullBackup_H_
+#define __ListFileRecursively_For_FullBackup_H_
+void ListFileRecursively_For_FullBackup(char *path);
+#endif

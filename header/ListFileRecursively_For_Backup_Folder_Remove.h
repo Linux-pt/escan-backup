@@ -1,0 +1,4 @@
+#ifndef __ListFileRecursively_For_Backup_Folder_Remove_H_
+#define __ListFileRecursively_For_Backup_Folder_Remove_H_
+void ListFileRecursively_For_Backup_Folder_Remove(char *basePath);
+#endif

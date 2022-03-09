@@ -1,0 +1,28 @@
+/************************************************ 
+
+DEVELOPER:OMKAR PISE
+TEAM:LINUX TEAM
+START-DATE:25 OCT 2020
+WORK:ESCAN-BACKUP
+
+ *********************************************************/
+/*making code optimize and making logic to store code on google drive*/
+/*removing database from backup files------>>>>major work in linux*/
+/*deleting files in linux*/
+/*if segementation error occurs please check dangling error in linux*/
+
+//LOG FILE---------->>>>>>>/var/MicroWorld/var/log/ebackup.log
+//CONF FILE FOR EBACKUP-------------->>>>>>>>>>/opt/MicroWorld/etc/ebackup.conf
+
+
+//int readConfiguration(const char *fileName, char *option, char *output);
+
+//int writeConfiguration(const char *conffile, const char *key, const char *value)
+
+//conf file will be from /opt/Microworld/etc/ebackup.conf
+
+
+----------------------------------------------------------------
+
+1.conf_file_read[it is reading from /opt/MicroWorld/etc/ebackup.conf file]
+2.if 0 then service was closed and if 1 then service was open
