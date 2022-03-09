@@ -4,10 +4,18 @@
 #include<iostream>
 #include<unistd.h>
 #include<stdlib.h>
+#include<signal.h>
+#include<sqlite3.h>
+#include"HandleSigint.h"
 using namespace std;
+extern sqlite3 *db;
+extern int flag;
 string encoded_path(char * path)
 {
-	
+
+signal(SIGINT, HandleSigint);
+signal(SIGTERM, HandleSigint);
+
 	char actualpath8 [1024]="";
 	char *ptrr8;
 

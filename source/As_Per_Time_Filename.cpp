@@ -46,8 +46,8 @@ string As_Per_Time_Filename()
 
 int As_Per_Time_Filename(char *name,long long int *epoch)
 {
-	//signal(SIGINT, HandleSigint);
-	//signal(SIGTERM, HandleSigint);
+	signal(SIGINT, HandleSigint);
+	signal(SIGTERM, HandleSigint);
 
 	//WriteLogForlibmwshare(2,"As_Per_Time_Filename started" );
 	time_t rawtime;

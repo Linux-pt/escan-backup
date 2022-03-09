@@ -8,10 +8,16 @@
 #include"unzip.h"
 #include"Extract.h"
 #include<vector>
+#include<signal.h>
+#include"HandleSigint.h"
 using namespace std;
-
+extern sqlite3 db;
+extern int flag;
 int UnzipFile(char *ZipName,const char *ZipItem)
 {
+	signal(SIGINT, HandleSigint);
+	signal(SIGTERM, HandleSigint);
+	
 	HZIP hz = OpenZip(ZipName , 0);
 	SetUnzipBaseDir(hz, "/tmp");
 	ZIPENTRY ze;
@@ -44,6 +50,9 @@ int UnzipFile(char *ZipName,const char *ZipItem)
 
 int ifpresent1BinaryEx(char *bufferParam, char *srchstr, int bufferlen)
 {
+	signal(SIGINT, HandleSigint);
+	signal(SIGTERM, HandleSigint);
+	
 	int j = 0;
 
 	//__try
@@ -82,7 +91,9 @@ int ifpresent1BinaryEx(char *bufferParam, char *srchstr, int bufferlen)
 
 int ExtractZip(char *ZipName, char *DestinationFolderName ,int *vulnerable,int *Patched)
 {
-
+	signal(SIGINT, HandleSigint);
+	signal(SIGTERM, HandleSigint);
+	
 	vector<string> listOfFileName;
 	HZIP hz = OpenZip(ZipName , 0);
 	SetUnzipBaseDir(hz, DestinationFolderName);
