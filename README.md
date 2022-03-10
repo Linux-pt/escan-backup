@@ -2,7 +2,7 @@
 
 <<------------ESCAN-BACKUP----------->>
 
-1.Requirement-->SQLITE3,C,C++,libzip(library),pthread
+1.Requirement-->>>>SQLITE3,C,C++,libzip(library),pthread
 
 2.Development-->1.Full-backup
 2.Incremental-backup
