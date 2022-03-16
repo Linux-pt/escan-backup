@@ -15,6 +15,7 @@ using namespace std;
 /*be aware it can error also if command was not present*/
 /*present in /usr/bin/sha1sum*/
 extern sqlite3 *db;
+
 string CalculateSha1sum(char *file_name_path)
 {
 	signal(SIGINT, HandleSigint);
