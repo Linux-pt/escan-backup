@@ -502,7 +502,8 @@ void Compare_File_Present_In_Backup(char *filename,char *file_name_path ,char *s
 							printf("zippping file\n");	
 							HZIP hz;
 							hz = CreateZip( buff, 0 ); 
-							ZipAdd(hz, tmpdata_file_name_path , "/tmpdata/escanAV/escanIncremental" );
+							//ZipAdd(hz, tmpdata_file_name_path , "/tmpdata/escanAV/escanIncremental" );
+							ZipAdd(hz, tmpdata_file_name_path , tmpdata_file_name_path );
 							CloseZip(hz);
 							/*
 							   struct zip_t *zip = zip_open(buff, ZIP_DEFAULT_COMPRESSION_LEVEL, 'w');
